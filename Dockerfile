@@ -24,5 +24,5 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 EXPOSE 8000
 
 CMD cp .env.example .env \
-    && php artisan migrate \
+    && php artisan migrate --force\
     && php artisan serve --host=0.0.0.0 --port=8000
