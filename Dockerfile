@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install zip pdo_mysql gd pdo_sqlite \
     && apt-get clean
 
-# Configure Nginx
+# Copy Nginx configuration
 COPY nginx/default.conf /etc/nginx/sites-available/default
 
 # Set the working directory
